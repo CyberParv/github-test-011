@@ -1,0 +1,34 @@
+{
+  "name": "github-test-011",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "test": "echo \"no tests configured\" && exit 0",
+    "test:unit": "vitest run -c vitest.unit.config.ts",
+    "test:integration": "vitest run -c vitest.integration.config.ts",
+    "test:e2e": "playwright test -c playwright.config.ts",
+    "test:ci": "npm run test:unit && npm run test:integration && npm run test:e2e",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "next": "^14.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3",
+    "@types/node": "^20.11.10",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "@playwright/test": "^1.41.2",
+    "eslint": "^8.56.0",
+    "supertest": "^6.3.4",
+    "ts-node": "^10.9.2",
+    "vitest": "^1.2.0",
+    "zod": "^3.22.4"
+  }
+}
